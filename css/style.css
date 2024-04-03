@@ -51,8 +51,8 @@ body {
   .game {
     max-width: 300px;
     min-width: 300px;
-    max-height: 300px;
     min-height: 300px;
+    max-height: 300px;
   }
 }
 
@@ -87,7 +87,7 @@ body {
 }
 .grid-size {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
 }
@@ -131,13 +131,16 @@ body {
     padding: 15px;
   }
   #new-size {
-    width: 200px;
+    width: 180px;
+  }
+  #size-label {
+    font-size: 15px;
+    font-weight: bold;
   }
 }
 .colors {
-  margin-top: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   max-width: 500px;
   flex: 5;
   margin: auto;
