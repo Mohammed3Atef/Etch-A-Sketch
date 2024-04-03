@@ -3,15 +3,15 @@ let container = document.querySelector(".game");
 let submit = document.getElementById("submit");
 let displaySize = document.getElementById("size-label");
 let gridSize = document.getElementById("new-size");
-let rinbowColor = document.getElementById("rinbow-color");
+let rainbowColor = document.getElementById("rainbow-color");
 let eraser = document.getElementById("eraser");
 let clearAllColor = document.getElementById("clear");
 let newSize = gridSize.value;
 console.log(gridSize.value);
 //Range Bar
-displaySize.textContent = `${gridSize.value} * ${gridSize.value}`;
+displaySize.textContent = `${gridSize.value} x ${gridSize.value}`;
 gridSize.addEventListener("change", function () {
-  displaySize.textContent = `${gridSize.value} * ${gridSize.value}`;
+  displaySize.textContent = `${gridSize.value} x ${gridSize.value}`;
 });
 //get grid size
 function getGridSize(width, height) {
@@ -26,7 +26,7 @@ function getGridSize(width, height) {
     squares.style.height = `calc((100%) / ${height})`;
     // mouse event
 
-    function rinbowColors() {
+    function rainbowColors() {
       let colors = [
         "red",
         "orange",
@@ -40,18 +40,18 @@ function getGridSize(width, height) {
       let color = colors[randomColor];
       return color;
     }
-    rinbowColor.addEventListener("click", () => {
+    rainbowColor.addEventListener("click", () => {
       squares.addEventListener("mouseover", (e) => {
-        e.target.style.backgroundColor = rinbowColors();
+        e.target.style.backgroundColor = rainbowColors();
       });
     });
     eraser.addEventListener("click", () => {
       squares.addEventListener("mouseover", (e) => {
-        e.target.style.backgroundColor = "black";
+        e.target.style.backgroundColor = "#ebdbdb";
       });
     });
     clearAllColor.addEventListener("click", () => {
-      squares.style.backgroundColor = "black";
+      squares.style.backgroundColor = "#ebdbdb";
     });
     // submit.addEventListener("click", () => {
     //   squares.addEventListener("mouseover", (e) => {
